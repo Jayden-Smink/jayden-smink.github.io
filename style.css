@@ -160,7 +160,7 @@ nav a {
 
 .about-me{
     display: flex;
-    margin-top: 120px;
+    margin-top: 160px;
     background-color: #EFF5FD;
     width: 100%;
     height: 20em;
@@ -175,6 +175,7 @@ nav a {
 
 .about-me a{
     color: #0A3FCA;
+    text-decoration: none;
 }
 
 .about-intro {
@@ -212,5 +213,103 @@ nav a {
     font-weight: bold;
     padding-right: 0.2em;
     padding-top: 0.1em;
+}
+
+.skills-section {
+    padding: 40px 100px;
+}
+
+.section-label {
+    color: #2356A9;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.skills-section h2 {
+    margin: 0 0 20px;
+    color: #071A3D;
+    font-size: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    border: 1px solid #AFC3DF;
+    border-radius: 6px;
+
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.skill-card i {
+    font-size: 2.7rem;
+    color: #2356A9;
+    margin-bottom: 8px;
+}
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #071A3D;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 50px;
+
+    border-top: 1px solid #d6dce5;
+    background-color: #ffffff;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #263A59;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    border-bottom: none;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #595959;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links i {
+    font-size: 1.2rem;
+    color: #595959;
+}
+
+.footer-links a:hover {
+    color: #2356A9;
 }
 
