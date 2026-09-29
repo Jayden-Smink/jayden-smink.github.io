@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Portfolio Jayden Smink</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a class="nav-item" href="index.html">Whoami</a></li>
+                <li><a class="active nav-item" href="#">Projecten</a></li>
+                <li><a class="nav-item" href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-intro">
+            <p class="intro-text">Mijn werk</p>
+            <h1>Projecten</h1>
+        </section>
+        <section class="project-filters" aria-label="Projecten filteren">
+            <button class="filter-button active-filter" data-filter="Alle">Alle</button>
+            <button class="filter-button" data-filter="HTML">HTML</button>
+            <button class="filter-button" data-filter="CSS">CSS</button>
+            <button class="filter-button" data-filter="JavaScript">JavaScript</button>
+            <button class="filter-button" data-filter="SQL">SQL</button>
+        </section>
+        <section class="projects" aria-label="Mijn projecten">
+            <template id="project-template">
+                <article class="project-card">
+                    <img class="project-image" src="" alt="">
+
+                    <div class="project-content">
+                        <h2 class="project-title"></h2>
+                        <p class="project-description"></p>
+
+                        <ul class="project-technologies"></ul>
+
+                        <a class="project-link" href="">
+                            Bekijk project →
+                        </a>
+                    </div>
+                </article>
+            </template>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            © 2026 Jayden Smink. Alle rechten voorbehouden.
+        </p>
+
+        <nav class="footer-links" aria-label="Sociale links">
+            <a href="https://github.com/jayden-smink/" target="_blank">
+                <i class="bi bi-github" aria-hidden="true"></i>
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jayden-smink-52a112410/" target="_blank">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                LinkedIn
+            </a>
+
+            <a href="mailto:25162780@student.hhs.nl">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                E-mail
+            </a>
+        </nav>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
