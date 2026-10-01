@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Blog</title>
 </head>
 
@@ -11,18 +13,91 @@
     <header class="site-header">
         <nav class="main-nav" aria-label="Hoofdnavigatie">
             <ul>
-                <li><a class="active nav-item" href="index.html">Whoami</a></li>
+                <li><a class="nav-item" href="index.html">Whoami</a></li>
                 <li><a class="nav-item" href="projects.html">Projecten</a></li>
-                <li><a class="nav-item" href="#">Blog</a></li>
+                <li><a class="active nav-item" href="#">Blog</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section class="blog-intro">
+            <p class="intro-text">Mijn ontwikkeling</p>
+            <h1>Blog</h1>
+        </section>
 
+        <section class="blog-posts" aria-label="Blogberichten">
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div>
+                        <p class="blog-date">September 2026</p>
+                        <h2>Mijn portfolio bouwen</h2>
+                    </div>
+
+                    <button class="blog-toggle" aria-expanded="false" aria-controls="blog-content-1">
+                        Lees meer
+                    </button>
+                </div>
+
+                <p class="blog-preview">
+                    Voor WPFW ben ik begonnen met het bouwen van mijn eigen portfolio website.
+                </p>
+
+                <div class="blog-content" id="blog-content-1" hidden>
+                    <p>
+                        Voor deze opdracht ben ik begonnen met het bouwen van mijn eigen portfolio website.
+                        HTML, CSS en JavaScript waren voor mij niet helemaal nieuw, omdat ik hier op het mbo
+                        al mee had gewerkt. Daar waren het alleen vooral losse opdrachten. Bij deze opdracht
+                        moest ik alles meer samenbrengen in één complete website met meerdere pagina's.
+                    </p>
+
+                    <p>
+                        Het lastigste onderdeel vond ik de layout en het responsive maken van de website.
+                        Op desktop zag de pagina er al snel goed uit, maar daarna moest ik ervoor zorgen dat
+                        dezelfde onderdelen ook goed bleven werken op tablets en telefoons. Hierbij moest ik
+                        onder andere nadenken over de breedte van onderdelen, het aantal kolommen, marges,
+                        tekstgroottes en hoe kaarten onder elkaar moesten komen te staan op kleinere schermen.
+                    </p>
+
+                    <p>
+                        Een verschil met hoe ik op het mbo werkte, is dat ik nu meer gebruikmaak van
+                        semantische HTML. Op het mbo gebruikte ik voor bijna alles div-elementen. Bij deze
+                        opdracht heb ik meer gewerkt met elementen zoals section, article, header, nav,
+                        main en footer. Hierdoor is de structuur van de pagina duidelijker en geeft de HTML
+                        beter aan wat de functie van ieder onderdeel is.
+                    </p>
+
+                    <p>
+                        Voor het ontwerp heb ik gekozen voor een eenvoudige blauw-witte stijl. Ik heb deze
+                        kleuren vooral gekozen omdat ik de combinatie mooi vind en omdat het portfolio
+                        daardoor rustig en overzichtelijk blijft. De blauwe kleur gebruik ik vooral voor
+                        belangrijke onderdelen zoals knoppen, links, labels en de actieve pagina in de
+                        navigatie.
+                    </p>
+
+                    <p>
+                        Tijdens het bouwen probeer ik de website steeds verder uit te breiden. De projecten
+                        worden bijvoorbeeld niet meer allemaal handmatig in de HTML gezet, maar worden met
+                        JavaScript vanuit objecten op de pagina geplaatst. Hierdoor is het later makkelijker
+                        om nieuwe projecten toe te voegen. Ook kunnen de projecten met JavaScript worden
+                        gefilterd op gebruikte technieken.
+                    </p>
+
+                    <p>
+                        Door deze opdracht merk ik vooral dat ik de basis van HTML en CSS al kende, maar dat
+                        het bouwen van een complete website meer vraagt dan alleen losse onderdelen maken.
+                        Ik moet nu meer nadenken over structuur, consistentie en hoe de website op verschillende
+                        schermformaten werkt. Daardoor krijg ik een beter beeld van hoe je een website op een
+                        nettere en beter uitbreidbare manier opbouwt.
+                    </p>
+                </div>
+            </article>
+
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>
             © 2026 Jayden Smink. Alle rechten voorbehouden.
         </p>
@@ -46,7 +121,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
-
 </body>
 
 </html>

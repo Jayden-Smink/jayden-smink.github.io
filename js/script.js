@@ -116,3 +116,35 @@ function initializeProjectsPage() {
 }
 
 initializeProjectsPage();
+
+function toggleBlogPost(button) {
+    const contentId = button.getAttribute("aria-controls");
+    const content = document.getElementById(contentId);
+
+    if (!content) {
+        return;
+    }
+
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", !isOpen);
+    content.hidden = isOpen;
+
+    if (isOpen) {
+        button.textContent = "Lees meer";
+    } else {
+        button.textContent = "Lees minder";
+    }
+}
+
+function setupBlogPosts() {
+    const blogButtons = document.querySelectorAll(".blog-toggle");
+
+    blogButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            toggleBlogPost(button);
+        });
+    });
+}
+
+setupBlogPosts();
