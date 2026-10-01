@@ -5,7 +5,7 @@ const projects = [
         image: "/img/portfolio-project.png",
         alt: "Screenshot van mijn portfolio website",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "#"
+        link: "https://github.com/Jayden-Smink/jayden-smink.github.io"
     },
     {
         title: "Smart Environment Dashboard",
