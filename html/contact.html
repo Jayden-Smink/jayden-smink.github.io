@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a class="nav-item" href="/index.html">Whoami</a></li>
+                <li><a class="nav-item" href="projects.html">Projecten</a></li>
+                <li><a class="nav-item" href="#">Blog</a></li>
+            </ul>
+
+            <a class="contact-button" href="html/contact.html">Contact</a>
+
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-section">
+            <div class="contact-header">
+                <p class="contact-label">CONTACT</p>
+                <h1>Neem contact op</h1>
+                <p>
+                    Heb je een vraag of wil je contact met mij opnemen?
+                    Vul dan het formulier hieronder in.
+                </p>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="naam">Naam</label>
+                    <input id="naam" name="naam" type="text" placeholder="Jouw naam" autocomplete="name" required
+                        minlength="2" aria-describedby="naam-error" aria-invalid="false">
+                    <span id="naam-error" class="form-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="jouw@email.nl" autocomplete="email"
+                        required aria-describedby="email-error" aria-invalid="false">
+                    <span id="email-error" class="form-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" placeholder="Waar kan ik je mee helpen?" required
+                        minlength="10" aria-describedby="bericht-error" aria-invalid="false"></textarea>
+                    <span id="bericht-error" class="form-error" role="alert"></span>
+                </div>
+
+                <button class="submit-button" type="submit">
+                    Versturen
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            © 2026 Jayden Smink. Alle rechten voorbehouden.
+        </p>
+
+        <nav class="footer-links" aria-label="Sociale links">
+            <a href="https://github.com/jayden-smink/" target="_blank">
+                <i class="bi bi-github" aria-hidden="true"></i>
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jayden-smink-52a112410/" target="_blank">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                LinkedIn
+            </a>
+
+            <a href="mailto:25162780@student.hhs.nl">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                E-mail
+            </a>
+        </nav>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

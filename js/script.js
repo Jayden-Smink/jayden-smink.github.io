@@ -50,17 +50,13 @@ function renderProjects(projectList) {
 
         image.src = project.image;
         image.alt = project.alt;
-
         title.textContent = project.title;
         description.textContent = project.description;
-
         link.href = project.link;
 
         project.technologies.forEach((technology) => {
             const technologyItem = document.createElement("li");
-
             technologyItem.textContent = technology;
-
             technologies.appendChild(technologyItem);
         });
 
@@ -115,8 +111,6 @@ function initializeProjectsPage() {
     setupProjectFilters();
 }
 
-initializeProjectsPage();
-
 function toggleBlogPost(button) {
     const contentId = button.getAttribute("aria-controls");
     const content = document.getElementById(contentId);
@@ -127,7 +121,7 @@ function toggleBlogPost(button) {
 
     const isOpen = button.getAttribute("aria-expanded") === "true";
 
-    button.setAttribute("aria-expanded", !isOpen);
+    button.setAttribute("aria-expanded", String(!isOpen));
     content.hidden = isOpen;
 
     if (isOpen) {
@@ -147,4 +141,149 @@ function setupBlogPosts() {
     });
 }
 
+function setupContactForm() {
+    const form = document.querySelector("#contact-form");
+
+    if (!form) {
+        return;
+    }
+
+    const velden = [
+        {
+            id: "naam",
+            boodschap: "Vul minimaal 2 tekens in."
+        },
+        {
+            id: "email",
+            boodschap: "Vul een geldig e-mailadres in."
+        },
+        {
+            id: "bericht",
+            boodschap: "Schrijf minimaal 10 tekens."
+        }
+    ];
+
+    function valideerVeld(veld) {
+        const input = document.querySelector(`#${veld.id}`);
+        const foutmelding = document.querySelector(`#${veld.id}-error`);
+
+        if (!input || !foutmelding) {
+            return false;
+        }
+
+        const geldig = input.checkValidity();
+
+        input.setAttribute("aria-invalid", String(!geldig));
+        foutmelding.textContent = geldig ? "" : veld.boodschap;
+
+        return geldig;
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const resultaten = velden.map((veld) => {
+            return valideerVeld(veld);
+        });
+
+        const alleGeldig = resultaten.every(Boolean);
+        const status = document.querySelector("#form-status");
+
+        if (!status) {
+            return;
+        }
+
+        if (!alleGeldig) {
+            status.textContent = "Er zijn nog fouten in het formulier.";
+            return;
+        }
+
+        status.textContent = "Bericht verzonden! Bedankt.";
+        form.reset();
+
+        velden.forEach((veld) => {
+            const input = document.querySelector(`#${veld.id}`);
+            const foutmelding = document.querySelector(`#${veld.id}-error`);
+
+            if (input) {
+                input.setAttribute("aria-invalid", "false");
+            }
+
+            if (foutmelding) {
+                foutmelding.textContent = "";
+            }
+        });
+    });
+}
+
+const weatherApiKey = "de5da7d85896d614764c960586e98549";
+
+async function loadWeather() {
+    const weatherData = document.querySelector("#weather-data");
+    const weatherStatus = document.querySelector("#weather-status");
+
+    if (!weatherData || !weatherStatus) {
+        return;
+    }
+
+    weatherData.textContent = "";
+    weatherStatus.textContent = "Weergegevens laden...";
+
+    try {
+        const response = await fetch(
+            `https://api.weatherstack.com/current?access_key=${weatherApiKey}&query=The%20Hague&units=m`
+        );
+
+        if (!response.ok) {
+            throw new Error("De API kon niet worden bereikt.");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+        if (data.error) {
+            throw new Error(data.error.info);
+        }
+
+        showWeather(data);
+        weatherStatus.textContent = "";
+    } catch (error) {
+        weatherStatus.textContent = "Het weer kon niet worden geladen.";
+        console.error("Weatherstack fout:", error);
+    }
+}
+
+function showWeather(data) {
+    const weatherData = document.querySelector("#weather-data");
+
+    if (!weatherData) {
+        return;
+    }
+
+    weatherData.textContent = "";
+
+    const temperature = document.createElement("p");
+    temperature.textContent = `${data.current.temperature} °C`;
+
+    const description = document.createElement("p");
+    description.textContent = data.current.weather_descriptions[0];
+
+    const humidity = document.createElement("p");
+    humidity.textContent = `Luchtvochtigheid: ${data.current.humidity}%`;
+
+    const wind = document.createElement("p");
+    wind.textContent = `Windsnelheid: ${data.current.wind_speed} km/u`;
+
+    weatherData.append(
+        temperature,
+        description,
+        humidity,
+        wind
+    );
+}
+
+initializeProjectsPage();
 setupBlogPosts();
+setupContactForm();
+loadWeather();

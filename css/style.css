@@ -3,18 +3,15 @@
     font-weight: bold;
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
 main {
     flex: 1;
 }
-
 nav {
     width: 100%;
     border-bottom: 1px solid #d3d3d3;
@@ -22,7 +19,6 @@ nav {
     padding-bottom: 30px;
     position: relative;
 }
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -31,32 +27,44 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 nav a {
     text-decoration: none;
     color: #09182E;
     font-weight: bold;
     font-size: 20px;
 }
-
 .nav-item {
     transition: 0.3s;
 }
-
 .nav-item:hover {
     color: #0A3FCA;
 }
-
+.contact-button {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    border: 1px solid #0A3FCA;
+    color: #0A3FCA;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.contact-button:hover{
+    background-color: #0A3FCA;
+    color: white;
+    transition: 0.5s;
+}
 .active {
     color: #0A3FCA;
     border-bottom: 3px solid;
     padding-bottom: 30px;
 }
-
 .intro {
+    position: relative;
+    min-height: 330px;
     margin-top: 120px;
 }
-
 .intro-text {
     font-weight: bold;
     font-size: 30px;
@@ -64,7 +72,6 @@ nav a {
     margin: 0 0 15px 0;
     padding-left: 100px;
 }
-
 .intro h1 {
     font-weight: bold;
     font-size: 80px;
@@ -72,7 +79,6 @@ nav a {
     margin: 0 0 20px 0;
     padding-left: 100px;
 }
-
 .intro h2 {
     font-weight: bold;
     font-size: 30px;
@@ -80,7 +86,6 @@ nav a {
     margin: 0 0 40px 0;
     padding-left: 100px;
 }
-
 .description {
     font-weight: bold;
     font-size: 20px;
@@ -88,7 +93,6 @@ nav a {
     margin: 0 0 30px 0;
     padding-left: 100px;
 }
-
 .project-button {
     position: absolute;
     font-weight: bold;
@@ -100,7 +104,6 @@ nav a {
     border-radius: 5px;
     text-decoration: none;
 }
-
 .project-button::after {
     content: "→";
     position: absolute;
@@ -109,7 +112,6 @@ nav a {
     transform: translateY(-50%);
     font-size: 22px;
 }
-
 .blog-button {
     position: absolute;
     font-weight: bold;
@@ -121,12 +123,10 @@ nav a {
     text-decoration: none;
     transition: 0.3s;
 }
-
 .blog-button:hover {
     background-color: #0A3FCA;
     color: white;
 }
-
 .about-me {
     display: flex;
     margin-top: 160px;
@@ -136,34 +136,28 @@ nav a {
     border-top: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
 }
-
 .about-me p {
     color: #595959;
     padding-right: 1em;
 }
-
 .about-me a {
     color: #0A3FCA;
     text-decoration: none;
 }
-
 .about-intro {
     display: flex;
     flex: 1;
     width: 250px;
     border-right: 1px solid #d3d3d3;
 }
-
 .about-me-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     flex: 3;
 }
-
 .about-item {
     border-right: 1px solid #d3d3d3;
 }
-
 .about-title {
     display: flex;
     align-items: flex-start;
@@ -171,42 +165,35 @@ nav a {
     padding-top: 2em;
     padding-left: 2.8em;
 }
-
 .no-border {
     border-right: none;
 }
-
-.bi {
+.about-title .bi {
     color: #0A3FCA;
     font-size: 3.2em;
     font-weight: bold;
     padding-right: 0.2em;
     padding-top: 0.1em;
 }
-
 .skills-section {
     padding: 40px 100px;
 }
-
 .section-label {
     color: #2356A9;
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 5px;
 }
-
 .skills-section h2 {
     margin: 0 0 20px;
     color: #071A3D;
     font-size: 2rem;
 }
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 }
-
 .skill-card {
     border: 1px solid #AFC3DF;
     border-radius: 6px;
@@ -217,31 +204,26 @@ nav a {
     justify-content: center;
     text-align: center;
 }
-
 .skill-card i {
     font-size: 2.7rem;
     color: #2356A9;
     margin-bottom: 8px;
 }
-
 .skill-card img {
     max-width: 50px;
     max-height: 50px;
     object-fit: contain;
     margin-bottom: 10px;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 .skill-card h3 {
     margin: 0;
     font-size: 1rem;
     color: #071A3D;
 }
-
 .site-footer {
     display: flex;
     justify-content: space-between;
@@ -250,13 +232,11 @@ img {
     border-top: 1px solid #d6dce5;
     background-color: #ffffff;
 }
-
 .site-footer p {
     margin: 0;
     color: #263A59;
     font-size: 0.9rem;
 }
-
 .footer-links {
     display: flex;
     justify-content: right;
@@ -269,7 +249,6 @@ img {
     margin: 0;
     position: static;
 }
-
 .footer-links a {
     display: flex;
     align-items: center;
@@ -278,21 +257,17 @@ img {
     text-decoration: none;
     font-size: 0.9rem;
 }
-
 .footer-links i {
     font-size: 1.2rem;
     color: #595959;
     padding: 0;
 }
-
 .footer-links a:hover {
     color: #2356A9;
 }
-
 .project-intro {
     margin-top: 120px;
 }
-
 .project-intro h1 {
     font-weight: bold;
     font-size: 60px;
@@ -300,7 +275,6 @@ img {
     margin: 0 0 20px 0;
     padding-left: 100px;
 }
-
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -309,7 +283,6 @@ img {
     margin-bottom: 40px;
     padding: 0 40px;
 }
-
 .project-card {
     border: 1px solid #d3d3d3;
     border-radius: 8px;
@@ -318,31 +291,26 @@ img {
     gap: 20px;
     min-width: 0;
 }
-
 .project-image {
     width: 45%;
     object-fit: cover;
     border-radius: 6px;
 }
-
 .project-content {
     flex: 1;
     min-width: 0;
 }
-
 .project-title {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 20px;
     color: #09182E;
 }
-
 .project-description {
     font-weight: normal;
     line-height: 1.5;
     color: #46546A;
 }
-
 .project-technologies {
     display: flex;
     flex-wrap: wrap;
@@ -350,7 +318,6 @@ img {
     list-style: none;
     padding: 0;
 }
-
 .project-technologies li {
     background-color: #F1F5FB;
     padding: 6px 10px;
@@ -358,14 +325,12 @@ img {
     font-size: 14px;
     font-weight: normal;
 }
-
 .project-link {
     display: inline-block;
     margin-top: 10px;
     color: #2356A9;
     text-decoration: none;
 }
-
 .project-filters {
     display: flex;
     gap: 12px;
@@ -373,7 +338,6 @@ img {
     margin-top: 100px;
     margin-left: 50px;
 }
-
 .filter-button {
     border: 1px solid #d3d3d3;
     background-color: white;
@@ -385,26 +349,21 @@ img {
     cursor: pointer;
     transition: 0.2s;
 }
-
 .filter-button:hover {
     border-color: #2356A9;
     color: #2356A9;
 }
-
 .active-filter {
     background-color: #2356A9;
     border-color: #2356A9;
     color: white;
 }
-
 .active-filter:hover {
     color: white;
 }
-
 .blog-intro {
     margin-top: 120px;
 }
-
 .blog-intro h1 {
     font-weight: bold;
     font-size: 60px;
@@ -412,67 +371,56 @@ img {
     margin: 0;
     padding-left: 100px;
 }
-
 .blog-posts {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 80px 100px 40px;
 }
-
 .blog-card {
     border: 1px solid #d3d3d3;
     border-radius: 8px;
     padding: 25px;
     background-color: white;
 }
-
 .blog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
-
 .blog-date {
     margin: 0 0 8px;
     color: #2356A9;
     font-size: 14px;
 }
-
 .blog-card h2 {
     margin: 0;
     color: #09182E;
     font-size: 24px;
 }
-
 .blog-preview {
     color: #595959;
     font-weight: normal;
     line-height: 1.6;
     margin: 15px 0 0;
 }
-
 .blog-content {
     margin-top: 20px;
     border-top: 1px solid #d6dce5;
     padding-top: 15px;
 }
-
 .blog-content p {
     color: #595959;
     font-weight: normal;
     line-height: 1.6;
 }
-
 .blog-content p:first-child {
     margin-top: 0;
 }
-
 .blog-content p:last-child {
     margin-bottom: 0;
 }
-
 .blog-toggle {
     border: 1px solid #2356A9;
     border-radius: 6px;
@@ -484,25 +432,185 @@ img {
     white-space: nowrap;
     transition: 0.2s;
 }
-
 .blog-toggle:hover {
     background-color: #2356A9;
     color: white;
 }
-
+.weather-card {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    width: 300px;
+    padding: 28px;
+    transform: translateY(-50%);
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    background-color: white;
+}
+.weather-label {
+    margin: 0 0 8px;
+    color: #0A3FCA;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.weather-card h3 {
+    margin: 0 0 18px;
+    color: #09182E;
+    font-size: 28px;
+}
+#weather-status {
+    margin: 0;
+    color: #595959;
+    font-weight: normal;
+}
+#weather-data p {
+    margin: 8px 0;
+    color: #595959;
+    font-weight: normal;
+}
+#weather-data p:first-child {
+    margin-top: 0;
+    color: #09182E;
+    font-size: 36px;
+    font-weight: bold;
+}
+.contact-page {
+    padding: 80px 20px;
+}
+.contact-section {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.contact-header {
+    margin-bottom: 30px;
+}
+.contact-header h1 {
+    margin: 0 0 10px;
+    color: #09182E;
+    font-size: 48px;
+}
+.contact-header p {
+    color: #595959;
+    line-height: 1.6;
+    font-weight: normal;
+}
+.contact-label {
+    color: #0A3FCA;
+    margin-bottom: 10px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    background-color: white;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-group label {
+    color: #09182E;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #09182E;
+    background-color: white;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0A3FCA;
+}
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+.form-error {
+    min-height: 18px;
+    color: #c62828;
+    font-size: 14px;
+    font-weight: normal;
+}
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #c62828;
+}
+.submit-button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: auto;
+    min-width: 0;
+    padding: 8px 14px;
+    border: 1px solid #0A3FCA;
+    background-color: #0A3FCA;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: 0.2s;
+}
+.submit-button .bi {
+    color: white;
+    font-size: 14px;
+    padding: 0;
+    font-weight: normal;
+}
+.submit-button:hover {
+    background-color: white;
+    color: #0A3FCA;
+}
+.submit-button:hover .bi {
+    color: #0A3FCA;
+}
+.form-status {
+    min-height: 20px;
+    color: #09182E;
+    font-weight: normal;
+}
+@media (max-width: 1100px) {
+    .intro {
+        min-height: 0;
+    }
+    .weather-card {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        max-width: 500px;
+        margin: 130px 40px 0;
+        transform: none;
+    }
+}
 @media (max-width: 768px) {
+    .contact-button {
+        right: 20px;
+    }
     nav ul {
         gap: 25px;
     }
-
     nav a {
         font-size: 18px;
     }
-
     .intro {
         margin-top: 80px;
     }
-
+    .weather-card {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
     .intro-text,
     .intro h1,
     .intro h2,
@@ -510,118 +618,125 @@ img {
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .intro h1 {
         font-size: 60px;
     }
-
     .intro h2 {
         font-size: 26px;
     }
-
     .project-button {
         margin-left: 40px;
     }
-
     .blog-button {
         margin-left: 340px;
     }
-
     .about-me {
         height: auto;
         flex-direction: column;
     }
-
     .about-intro {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #d3d3d3;
     }
-
     .about-me-items {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .skills-section {
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
     .project-intro {
         margin-top: 80px;
     }
-
     .project-intro .intro-text,
     .project-intro h1 {
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .project-filters {
         margin-left: 40px;
         margin-right: 40px;
     }
-
     .projects {
         grid-template-columns: repeat(2, 1fr);
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .project-card {
         flex-direction: column;
     }
-
     .project-image {
         width: 100%;
     }
-
     .blog-intro {
         margin-top: 80px;
     }
-
     .blog-intro .intro-text,
     .blog-intro h1 {
         padding-left: 40px;
         padding-right: 40px;
     }
-
     .blog-posts {
         padding: 60px 40px 40px;
     }
-
     .site-footer {
         padding-left: 40px;
         padding-right: 40px;
     }
 }
-
 @media (max-width: 480px) {
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .contact-button {
+        position: static;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        transform: none;
+        text-align: center;
+    }
+    .contact-page {
+        padding: 50px 20px;
+    }
+    .contact-header h1 {
+        font-size: 40px;
+    }
+    .contact-form {
+        padding: 20px;
+    }
     nav {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-
     nav ul {
         gap: 18px;
     }
-
     nav a {
         font-size: 16px;
     }
-
     .active {
         padding-bottom: 20px;
     }
-
     .intro {
         margin-top: 60px;
     }
-
+    .weather-card {
+        margin: 110px 20px 0;
+        padding: 20px;
+    }
+    .weather-card h3 {
+        font-size: 24px;
+    }
+    #weather-data p:first-child {
+        font-size: 32px;
+    }
     .intro-text,
     .intro h1,
     .intro h2,
@@ -629,23 +744,18 @@ img {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .intro-text {
         font-size: 22px;
     }
-
     .intro h1 {
         font-size: 44px;
     }
-
     .intro h2 {
         font-size: 22px;
     }
-
     .description {
         font-size: 17px;
     }
-
     .project-button,
     .blog-button {
         position: relative;
@@ -655,131 +765,105 @@ img {
         margin-right: 20px;
         text-align: center;
     }
-
     .project-button {
         margin-top: 10px;
     }
-
     .blog-button {
         margin-top: 80px;
     }
-
     .about-me {
         margin-top: 80px;
         height: auto;
         flex-direction: column;
     }
-
     .about-intro {
         width: 100%;
         min-width: 0;
         border-right: none;
         border-bottom: 1px solid #d3d3d3;
     }
-
     .about-me-items {
         grid-template-columns: 1fr;
     }
-
     .about-item {
         border-right: none;
         border-bottom: 1px solid #d3d3d3;
     }
-
     .about-title {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .skills-section {
         padding: 40px 20px;
     }
-
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-
     .project-intro {
         margin-top: 60px;
     }
-
     .project-intro .intro-text,
     .project-intro h1 {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .project-intro h1 {
         font-size: 44px;
     }
-
     .project-filters {
         margin-top: 60px;
         margin-left: 20px;
         margin-right: 20px;
         gap: 8px;
     }
-
     .filter-button {
         padding: 8px 14px;
         font-size: 14px;
     }
-
     .projects {
         grid-template-columns: 1fr;
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 25px;
     }
-
     .project-card {
         flex-direction: column;
     }
-
     .project-image {
         width: 100%;
     }
-
     .blog-intro {
         margin-top: 60px;
     }
-
     .blog-intro .intro-text,
     .blog-intro h1 {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .blog-intro h1 {
         font-size: 44px;
     }
-
     .blog-posts {
         padding: 50px 20px 30px;
     }
-
     .blog-card {
         padding: 20px;
     }
-
     .blog-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-
     .blog-toggle {
         width: 100%;
     }
-
     .site-footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
         padding: 20px;
     }
-
     .footer-links {
         width: auto;
         flex-wrap: wrap;
