@@ -198,7 +198,7 @@ function setupContactForm() {
             return;
         }
 
-        status.textContent = "Bericht verzonden! Bedankt.";
+        status.textContent = "Formulier succesvol ingevuld!";
         form.reset();
 
         velden.forEach((veld) => {
